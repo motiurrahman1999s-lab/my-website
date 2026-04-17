@@ -4,21 +4,37 @@
     <meta charset="UTF-8"> 
     <title>আমার ওয়েবসাইট</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f4f4f4;
-            text-align: center;
-            padding: 50px;
-        }
-        .card {
-            background: white;
-            padding: 20px;
-            border-radius: 15px;
-            box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
-            display: inline-block;
-            max-width: 90%;
-        }
-     h1 { color: #333; }
+    body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    /* অ্যানিমেটেড গ্রেডিয়েন্ট ব্যাকগ্রাউন্ড */
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientBG 15s ease infinite;
+}
+
+/* অ্যানিমেশন কিভাবে চলবে তার নিয়ম */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+} 
+    .card {
+    background: rgba(255, 255, 255, 0.9); /* হালকা স্বচ্ছ সাদা */
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.2);
+    max-width: 400px;
+    width: 100%;
+    backdrop-filter: blur(10px); /* ঝাপসা কাঁচের মতো ইফেক্ট */
+}
+
+<h1 { color: #333; }
         p { color: #666; }
         .btn {
             background-color: #007bff;
