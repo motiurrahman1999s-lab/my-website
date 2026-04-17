@@ -45,12 +45,37 @@
             display: inline-block;
             margin: 10px;
         }
+        
+    </styl.social-icons {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+.icon {
+    width: 40px;
+    height: 40px;
+    background: #007bff;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 20px;
+    transition: 0.3s;
+}
+.icon:hover {
+    transform: scale(1.2);
+    background: #0056b3;
+}
+
     </style>
 </head>
 <body>
 
     <div class="card">
-       <img src="300×300.jpg" alt="Motiur" style="width: 130px; height: 130px; border-radius: 50%; object-fit: cover; margin-top: 15px; border: 3px solid #007bff; display: block; margin-left: auto; margin-right: auto;">
+       <img src="300×300.jpg" alt="Motiur" style="width: 130px; height: 130px; border-radius: 50%; object-fit: cover; margin-top: 15px; border: 3px solid #007bff; displmargin-leftmargin-left: auto; margin-right: auto;">
 
 
         <h1>স্বাগতম, আমি মতিউর</h1>
@@ -58,8 +83,13 @@
         
         <a href="#"> আমার কাজ দেখুন </a>
         <br>
-        <a href="https://www.facebook.com/profile.php?id=100095286835305" class="btn">ফেসবুক প্রোফাইল</a>
-
+        <div class="social-icons">
+    <a href="https://www.facebook.com/profile.php?id=100095286835305" class="icon" title="Facebook">F</a>
+    
+    <a href="https://t.me/D0rkman" class="icon" title="Telegram">T</a>
+    
+    <a href="https://wa.me/8801777577425" class="icon" title="WhatsApp">W</a>
+</div>
         <h3>আমি যা যা শিখছি:</h3>
         <ul style="text-align: left; display: inline-block;">
             <li>এইচটিএমএল (HTML)</li>
