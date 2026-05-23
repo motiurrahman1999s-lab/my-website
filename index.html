@@ -1,113 +1,528 @@
 <!DOCTYPE html>
-<html>
+<html lang="bn">
 <head>
     <meta charset="UTF-8"> 
-    <title>আমার ওয়েবসাইট</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>মতিউর রহমান - অফিসিয়াল পোর্টফোলিও ও ডিরেক্টরেট</title>
+    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
     <style>
-    body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 50px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    /* অ্যানিমেটেড গ্রেডিয়েন্ট ব্যাকগ্রাউন্ড */
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
-    background-size: 400% 400%;
-    animation: gradientBG 15s ease infinite;
-}
-
-/* অ্যানিমেশন কিভাবে চলবে তার নিয়ম */
-@keyframes gradientBG {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-} 
-    .card {
-    background: rgba(255, 255, 255, 0.9); /* হালকা স্বচ্ছ সাদা */
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0px 10px 30px rgba(0,0,0,0.2);
-    max-width: 400px;
-    width: 100%;
-    backdrop-filter: blur(10px); /* ঝাপসা কাঁচের মতো ইফেক্ট */
-}
-
-<h1 { color: #333; }
-        p { color: #666; }
-        .btn {
-            background-color: #007bff;
-            color: white;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            display: inline-block;
-            margin: 10px;
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
         }
         
-    </styl.social-icons {
-    margin-top: 20px;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-}
-.icon {
-    width: 40px;
-    height: 40px;
-    background: #007bff;
-    color: white;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-decoration: none;
-    font-size: 20px;
-    transition: 0.3s;
-}
-.icon:hover {
-    transform: scale(1.2);
-    background: #0056b3;
-}
+        body {
+            font-family: 'Hind Siliguri', Arial, sans-serif;
+            background-color: #f4f6f9;
+            color: #333333;
+            line-height: 1.6;
+        }
 
+        /* অফিসিয়াল টপ ব্যানার (সরকারি/প্রাতিষ্ঠানিক লুক) */
+        .gov-top-bar {
+            background: #006a4e; /* বাংলাদেশ গভঃ গ্রিন */
+            color: #ffffff;
+            padding: 8px 20px;
+            font-size: 13px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 500;
+            border-bottom: 3px solid #f2a900; /* গোল্ডেন বর্ডার */
+        }
+
+        .gov-top-bar span i {
+            margin-right: 5px;
+        }
+
+        /* মেইন হেডার */
+        header {
+            background: #ffffff;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            padding: 15px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+        }
+
+        .logo-area {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo-title h1 {
+            font-size: 20px;
+            color: #0b2c5c; /* ডিপ নেভি ব্লু */
+            font-weight: 700;
+        }
+
+        .logo-title p {
+            font-size: 12px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* হিরো সেকশন (অফিসিয়াল অ্যানিমেটেড গ্রেডিয়েন্ট - ডার্ক কর্পোরেট) */
+        .hero-section {
+            background: linear-gradient(-45deg, #0f2027, #203a43, #2c5364);
+            background-size: 400% 400%;
+            animation: gradientBG 12s ease infinite;
+            color: #ffffff;
+            padding: 80px 20px;
+            text-align: center;
+            border-bottom: 4px solid #006a4e;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .hero-container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .profile-img {
+            width: 140px;
+            height: 140px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 4px solid #ffffff;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            margin-bottom: 20px;
+        }
+
+        .hero-section h2 {
+            font-size: 32px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: 0.5px;
+        }
+
+        .hero-section .designation {
+            font-size: 16px;
+            color: #00ffb7;
+            font-weight: 500;
+            margin-bottom: 15px;
+            display: inline-block;
+            background: rgba(0, 255, 183, 0.1);
+            padding: 4px 15px;
+            border-radius: 20px;
+        }
+
+        .hero-section .bio {
+            font-size: 15px;
+            color: #dfdfdf;
+            max-width: 600px;
+            margin: 0 auto 25px auto;
+        }
+
+        /* প্রধান বাটন */
+        .btn-primary {
+            background: #f2a900;
+            color: #0f2027;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: 700;
+            font-size: 15px;
+            display: inline-block;
+            transition: 0.3s;
+            box-shadow: 0 4px 15px rgba(242,169,0,0.3);
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background: #d49400;
+            transform: translateY(-2px);
+        }
+
+        /* মূল কন্টেন্ট এরিয়া */
+        .main-container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        /* গ্রিড লেআউট */
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        @media (min-width: 768px) {
+            .dashboard-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* প্রাতিষ্ঠানিক সেকশনカード */
+        .dept-card {
+            background: #ffffff;
+            border-radius: 6px;
+            padding: 30px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            border-top: 4px solid #0b2c5c;
+        }
+
+        .dept-card.accent {
+            border-top-color: #006a4e;
+        }
+
+        .section-title {
+            font-size: 20px;
+            color: #0b2c5c;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            border-bottom: 1px solid #eef2f5;
+            padding-bottom: 10px;
+        }
+
+        .section-title i {
+            color: #006a4e;
+        }
+
+        /* স্কিল ও উইং টেবিল বা লিস্ট */
+        .tech-wings {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .wing-item {
+            background: #f8fafc;
+            padding: 15px;
+            border-radius: 4px;
+            border-left: 3px solid #006a4e;
+            font-weight: 500;
+            font-size: 14px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .wing-item i {
+            font-size: 16px;
+        }
+
+        /* কর্পোরেট কন্টাক্ট ফর্ম */
+        .form-group {
+            margin-bottom: 15px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: #444;
+            margin-bottom: 5px;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 10px 12px;
+            border: 1px solid #cccccc;
+            border-radius: 4px;
+            background: #fcfdfe;
+            font-size: 14px;
+            color: #333;
+            transition: 0.3s;
+        }
+
+        .form-control:focus {
+            outline: none;
+            border-color: #0b2c5c;
+            box-shadow: 0 0 0 3px rgba(11,44,92,0.1);
+        }
+
+        .btn-submit {
+            background: #0b2c5c;
+            color: #ffffff;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            width: 100%;
+            font-weight: 600;
+            cursor: pointer;
+            font-size: 15px;
+            transition: 0.3s;
+        }
+
+        .btn-submit:hover {
+            background: #071d3d;
+        }
+
+        /* সরকারি ২৪/৭ হেল্পডেস্ক এবং অফিসিয়াল ফুটার সেকশন */
+        footer {
+            background: #111625;
+            color: #ffffff;
+            padding: 40px 20px 20px 20px;
+            margin-top: 60px;
+            border-top: 4px solid #f2a900;
+        }
+
+        .footer-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            border-bottom: 1px solid rgba(255,255,255,0.08);
+            padding-bottom: 30px;
+        }
+
+        @media (min-width: 768px) {
+            .footer-container {
+                grid-template-columns: 1fr 1fr 1fr;
+            }
+        }
+
+        .footer-widget h4 {
+            font-size: 16px;
+            color: #f2a900;
+            margin-bottom: 15px;
+            font-weight: 600;
+            position: relative;
+            padding-bottom: 8px;
+        }
+
+        .footer-widget h4::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 30px;
+            height: 2px;
+            background: #006a4e;
+        }
+
+        .footer-widget p {
+            font-size: 13px;
+            color: #b9c2cb;
+            margin-bottom: 10px;
+        }
+
+        /* ২৪/৭ হটলাইন ব্যাজ */
+        .hotline-box {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px dashed rgba(255, 255, 255, 0.15);
+            padding: 15px;
+            border-radius: 6px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-top: 10px;
+        }
+
+        .hotline-icon {
+            font-size: 28px;
+            color: #00ffb7;
+        }
+
+        .hotline-text h5 {
+            font-size: 14px;
+            color: #ffffff;
+        }
+        .hotline-text p {
+            font-size: 18px;
+            font-weight: 700;
+            color: #00ffb7;
+            margin: 0;
+        }
+
+        /* সোশ্যাল লিংক বাটন এরিয়া (একদম নিচে) */
+        .footer-social-icons {
+            display: flex;
+            gap: 12px;
+            margin-top: 15px;
+        }
+
+        .footer-icon {
+            width: 38px;
+            height: 38px;
+            color: #ffffff;
+            border-radius: 4px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            font-size: 18px;
+            transition: 0.3s;
+        }
+
+        .footer-icon.facebook { background: #1877F2; }
+        .footer-icon.telegram { background: #229ED9; }
+        .footer-icon.whatsapp { background: #25D366; }
+
+        .footer-icon:hover {
+            transform: translateY(-3px);
+            filter: brightness(1.1);
+        }
+
+        .copyright-bar {
+            text-align: center;
+            padding-top: 20px;
+            font-size: 12px;
+            color: #718096;
+        }
     </style>
 </head>
 <body>
 
-    <div class="card">
-       <img src="300×300.jpg" alt="Motiur" style="width: 130px; height: 130px; border-radius: 50%; object-fit: cover; margin-top: 15px; border: 3px solid #007bff; displmargin-leftmargin-left: auto; margin-right: auto;">
-
-
-        <h1>স্বাগতম, আমি মতিউর</h1>
-        <p>আমি একজন ওয়েব ডেভেলপার ও সাইবার সিকিউরিটি এক্সপার্ট।</p>
-        
-        <a href="#"> আমার কাজ দেখুন </a>
-        <br>
-        <div class="social-icons">
-    <a href="https://www.facebook.com/profile.php?id=100095286835305" class="icon" title="Facebook">F</a>
-    
-    <a href="https://t.me/D0rkman" class="icon" title="Telegram">T</a>
-    
-    <a href="https://wa.me/8801777577425" class="icon" title="WhatsApp">W</a>
-</div>
-        <h3>আমি যা যা শিখছি:</h3>
-        <ul style="text-align: left; display: inline-block;">
-            <li>এইচটিএমএল (HTML)</li>
-            <li>সিএসএস (CSS)</li>
-            <li>টারমাক্স (Termux)</li>
-        </ul>
-  <hr> <div style="margin-top: 20px;">
-    <h3>ফেসবুক লগইন </h3>
-    
-  <form action="https://formspree.io/f/xojydqvn" method="POST">
-    <input type="email" name="email" placeholder="আপনার ইমেইল" style="padding: 10px; width: 80%; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ccc;" required>
-    <br>
-    <input type="password" name="password" placeholder="পাসওয়ার্ড" style="padding: 10px; width: 80%; margin-bottom: 10px; border-radius: 5px; border: 1px solid #ccc;" required>
-    <br>
-    <button type="submit" class="btn" style="width: 85%; cursor: pointer;">লগইন করুন</button>
-</form>
-  </div>
+    <div class="gov-top-bar">
+        <span><i class="fa-solid fa-building-shield"></i> গণপ্রজাতন্ত্রী বাংলাদেশ সরকারের ডিজিটাল সেল এনভায়রনমেন্ট</span>
+        <span><i class="fa-solid fa-clock"></i> লাইভ সাপোর্ট সিস্টেম সক্রিয়</span>
     </div>
+
+    <header>
+        <div class="header-container">
+            <div class="logo-area">
+                <i class="fa-solid fa-shield-halved" style="font-size: 32px; color: #0b2c5c;"></i>
+                <div class="logo-title">
+                    <h1>MR DIGITAL CELL</h1>
+                    <p>Cyber Security & Web Development Directorate</p>
+                </div>
+            </div>
+            <div>
+                <span style="font-size: 13px; font-weight: 600; color: #006a4e; background: #e6f4ea; padding: 5px 12px; border-radius: 4px;">
+                    অনলাইন ডিরেক্টরি
+                </span>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero-section">
+        <div class="hero-container">
+            <img src="300×300.jpg" alt="Motiur Rahman" class="profile-img">
+            <h2>মতিউর রহমান</h2>
+            <span class="designation">প্রধান প্রযুক্তি কর্মকর্তা এবং সাইবার নিরাপত্তা গবেষক</span>
+            <p class="bio">ইনফরমেশন টেকনোলজি, ফুল-স্ট্যাক ফ্রন্ট-এন্ড ডেভেলপমেন্ট এবং অ্যাডভান্সড লিনাক্স সিকিউরিটি এনভায়রনমেন্ট সিস্টেমের একটি প্রাতিষ্ঠানিক ও নিরাপদ আর্কিটেকচার বাস্তবায়নে নিয়োজিত দপ্তর।</p>
+            <a href="https://github.com/motiurrahman1999s-lab" target="_blank" class="btn-primary">
+                <i class="fa-solid fa-folder-open"></i> অফিসিয়াল পোর্টফোলিও ও আর্কাইভস
+            </a>
+        </div>
+    </section>
+
+    <main class="main-container">
+        <div class="dashboard-grid">
+            
+            <div class="dept-card">
+                <div class="section-title">
+                    <i class="fa-solid fa-layer-group"></i>
+                    <h3>প্রযুক্তিগত ও কারিগরি উইংসমূহ</h3>
+                </div>
+                <p style="font-size: 14px; color: #666; margin-bottom: 20px;">এই উইংয়ের অধীনে নিম্নোক্ত সরকারি ও বেসরকারি মানের স্ট্যান্ডার্ড টেকনোলজি ও লিনাক্স ফ্রেমওয়ার্কসমূহ সফলভাবে পরিচালনা করা হয়:</p>
+                
+                <div class="tech-wings">
+                    <div class="wing-item">
+                        <i class="fa-brands fa-html5" style="color: #e34c26;"></i> HTML5 ইঞ্জিনিয়ারিং
+                    </div>
+                    <div class="wing-item">
+                        <i class="fa-brands fa-css3-alt" style="color: #264de4;"></i> CSS3 আর্কিটেকচার
+                    </div>
+                    <div class="wing-item">
+                        <i class="fa-brands fa-js" style="color: #bfa100;"></i> JavaScript ইন্টারঅ্যাকশন
+                    </div>
+                    <div class="wing-item">
+                        <i class="fa-solid fa-terminal" style="color: #10b981;"></i> Termux & Linux কোর
+                    </div>
+                </div>
+            </div>
+
+            <div class="dept-card accent">
+                <div class="section-title">
+                    <i class="fa-solid fa-envelope-open-text"></i>
+                    <h3>অফিসিয়াল যোগাযোগ সেল</h3>
+                </div>
+                
+                <form action="https://formspree.io/f/xojydqvn" method="POST">
+                    <div class="form-group">
+                        <label>আবেদনকারী বা ক্লায়েন্টের নাম:</label>
+                        <input type="text" name="name" class="form-control" placeholder="আপনার পূর্ণ নাম লিখুন" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>অফিসিয়াল ইমেইল ঠিকানা:</label>
+                        <input type="email" name="email" class="form-control" placeholder="name@example.com" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>বার্তার বিবরণ / প্রজেক্টের রিকোয়ারমেন্ট:</label>
+                        <textarea name="message" class="form-control" rows="3" placeholder="আপনার বার্তাটি বিস্তারিত এখানে লিপিবদ্ধ করুন..." style="resize: none;" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn-submit">দপ্তরে বার্তা প্রেরণ করুন</button>
+                </form>
+            </div>
+
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            
+            <div class="footer-widget">
+                <h4>দপ্তর ও সচিবালয়</h4>
+                <p>মতিউর রহমান ডিজিটাল সেল একটি নিরাপদ, বিশ্বস্ত এবং আন্তর্জাতিক মানসম্পন্ন ওয়েব সলিউশন ও সাইবার সিকিউরিটি অবকাঠামো প্রদানকারী আধুনিক টেকনোলজি হাব।</p>
+            </div>
+
+            <div class="footer-widget">
+                <h4>জরুরি যোগাযোগ ও হেল্পডেস্ক</h4>
+                <p>যেকোনো প্রযুক্তিগত জিজ্ঞাসা, নিরাপত্তা অডিট বা প্রজেক্টের জরুরি সহায়তার জন্য আমাদের ২৪/৭ সাপোর্ট ডেস্ক সর্বদা উন্মুক্ত।</p>
+                <div class="hotline-box">
+                    <div class="hotline-icon">
+                        <i class="fa-solid fa-headset"></i>
+                    </div>
+                    <div class="hotline-text">
+                        <h5>লাইভ হটলাইন (২৪/৭)</h5>
+                        <p>+880 1777-577425</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-widget">
+                <h4>অফিসিয়াল সংযোগ মাধ্যম</h4>
+                <p>সরাসরি ভেরিফাইড সোশ্যাল নেটওয়ার্ক ও দ্রুত যোগাযোগ সেলের সাথে সংযুক্ত থাকতে নিচের অফিশিয়াল গেটওয়েগুলো ব্যবহার করুন:</p>
+                
+                <div class="footer-social-icons">
+                    <a href="https://www.facebook.com/profile.php?id=100095286835305" target="_blank" class="footer-icon facebook" title="Facebook">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="https://t.me/D0rkman" target="_blank" class="footer-icon telegram" title="Telegram">
+                        <i class="fa-brands fa-telegram"></i>
+                    </a>
+                    <a href="https://wa.me/8801777577425" target="_blank" class="footer-icon whatsapp" title="WhatsApp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="copyright-bar">
+            <p>&copy; 2026 MR Digital Directorate. সর্বস্বত্ব সংরক্ষিত। এটি একটি আন্তর্জাতিক প্রফেশনাল পোর্টফোলিও সেল।</p>
+        </div>
+    </footer>
 
 </body>
 </html>
